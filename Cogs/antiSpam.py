@@ -32,7 +32,7 @@ class AntiSpamCog(commands.Cog, name="change setting from anti spam command"):
                 data["antiSpam"] = True
                 newdata = json.dumps(data, indent=4, ensure_ascii=False)
 
-            embed = discord.Embed(title = f"**ANTI SPAM WAS ENABLED**", description = f"The anti spam was enabled.", color = 0x2fa737) # Green
+            embed = discord.Embed(title = f"**ANTI SPAM WAS ENABLED**", description = f"Anti Spam has been Enabled.", color = 0x2fa737) # Green
         else:
             # Edit configuration.json
             with open("configuration.json", "r") as config:
@@ -41,7 +41,7 @@ class AntiSpamCog(commands.Cog, name="change setting from anti spam command"):
                 data["antiSpam"] = False
                 newdata = json.dumps(data, indent=4, ensure_ascii=False)
 
-            embed = discord.Embed(title = f"**ANTI SPAM WAS DISABLED**", description = f"The anti spam was disabled.", color = 0xe00000) # Red
+            embed = discord.Embed(title = f"**ANTI SPAM WAS DISABLED**", description = f"Anti Spam has been disabled.", color = 0xe00000) # Red
         
         await ctx.channel.send(embed = embed)
         
